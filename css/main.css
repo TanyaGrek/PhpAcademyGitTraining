@@ -1,3 +1,7 @@
+/* =====================================================================================================================
+ helpers
+===================================================================================================================== */
+
 /*
  * Clearfix: contain floats
  *
@@ -20,9 +24,27 @@
     clear: both;
 }
 
+/* =====================================================================================================================
+ styles for main elements
+===================================================================================================================== */
+
+body {
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    color: #292f33;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================================================================================
+ I ♥ FrontEnd styles
+===================================================================================================================== */
+
 .heart-container {
+    font-family: "Bitter", serif;
     text-align: center;
-    background: #3c948b;
+    background: #98ddde;
     -webkit-box-shadow: 0 0 4px 0 #2b2b2b;
     box-shadow: 0 0 4px 0 #2b2b2b;
     padding: 20px;
@@ -35,10 +57,9 @@
 .love-text {
     position: relative;
     display: inline-block;
-    text-shadow: 5px 6px 9px #215979;
+    text-shadow: 5px 6px 9px #3c948b;
     color: #343434;
-    font-size: 7em;
-    font-family: 'Bitter', serif;
+    font-size: 6em;
 }
 
 #heart {
@@ -60,7 +81,7 @@
     top: 40px;
     width: 150px;
     height: 240px;
-    background: #e62739;
+    background: #f7786b;
     border-radius: 150px 150px 0 0;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -85,7 +106,6 @@
 }
 
 /* It needs some depth  */
-
 #heart::after {
     box-shadow: inset -4px -4px 0 4px rgba(90, 92, 81, 0.15);
 }
@@ -143,25 +163,73 @@
     animation-play-state: running;
 }
 
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 1200px;
-    background-color: #2b2b2b;
-    color: azure;
-    padding: 30px;
+/* =====================================================================================================================
+ Top menu
+===================================================================================================================== */
+
+.inner-menu ul {
+    font-family: 'Ubuntu', sans-serif;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    text-align: justify;
+    margin: 0;
+    padding: 0;
 }
 
-.main-content a {
+.inner-menu li {
+    border-bottom: 1px solid #91a8d0;
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+    display: table-cell;
+    font-size: 1em;
+    text-align: center;
+    line-height: 3em;
+    min-height: 3em;
+    cursor: pointer;
+    word-wrap: break-word;
+}
+
+.inner-menu li a {
+    font-size: 2em;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    background: #fff;
+    color: #dd4132;
+    -webkit-transition: background 0.3s ease-out;
+    transition: background 0.3s ease-out;
+    font-weight: bold;
+}
+
+.inner-menu li:nth-child(2n) a{
+    background: #f7786b;
+    color: #343434;
+}
+
+.inner-menu li a:hover {
+    background: #dd4132;
     color: #fff;
 }
 
 .textBlock {
-    color: white;
-    border: 1px white dotted;
-    width: 196px;
-    height: 140px;
+    border: 2px #98ddde solid;
+    width: 208px;
+    height: 200px;
     float: left;
-    margin: auto 2px 2px auto;
+    margin: auto 1px 20px 1px;
     text-align: center;
+}
+.textBlock h4 {
+    color: #dd4132;
+}
+
+/* =====================================================================================================================
+ Main area
+===================================================================================================================== */
+
+.main-content {
+    padding: 30px;
+    line-height: 1.2em;
 }
